@@ -22,4 +22,15 @@
     <string name="i_agree_with_all_term_condition">전체 약관에 동의합니다.</string>
     <string name="private_policy">개인정보 취급방침 (필수)</string>
     <string name="sign_up">회원가입</string>
+    <string name="check_your_area_expertise">전문 분야를 선택해주세요</string>
+    <string name="select_an_items">품목을 선택해주세요</string>
+    <string name="next">다음</string>
+    <string name="back">이전</string>
+    <string name="area">지역</string>
+    <string name="city_country_gid">시/군/구</string>
+    <string name="check_your_activity_country">활동 지역을 선택해주세요</string>
+    <string name="get_verification_letter">인증문자 받기</string>
+    <string name="input">입력</string>
+    <string name="get_phone_verification_letter">인증확인</string>
+    <string name="hint_verification_phone">인증번호 입력</string>
 </resources>

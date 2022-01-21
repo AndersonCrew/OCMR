@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/checkAreaExpertiseFragment"
+    android:id="@+id/register_nav_graph">
+
+    <fragment android:id="@+id/checkAreaExpertiseFragment"
+        tools:layout="@layout/check_area_expertise_fragment"
+        android:name="com.example.ocmr.ui.register.CheckAreaExpertiseFragment">
+
+        <action android:id="@+id/action_checkArea_to_select_item"
+            app:destination="@id/selectItemFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/selectItemFragment"
+        tools:layout="@layout/select_country_fragment"
+        android:name="com.example.ocmr.ui.register.SelectCountryFragment"/>
+
+<fragment android:id="@+id/verificatioRegisterFragment"
+        tools:layout="@layout/verify_phone_number_fragment"
+        android:name="com.example.ocmr.ui.register.VerificationRegisterFragment"/>
+
+</navigation>

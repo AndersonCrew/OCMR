@@ -2,6 +2,10 @@
 buildscript {
     ext {
         nav_version = "2.3.5"
+        dagger_hilt = "2.38.1"
+        life_cycle_version = "2.3.1"
+        retrofit_version = "2.9.0"
+        viewmodel_version = "2.3.1"
     }
 
     repositories {

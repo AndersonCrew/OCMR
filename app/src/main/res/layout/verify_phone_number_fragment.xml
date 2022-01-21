@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="@string/check_your_activity_country"
+        android:textColor="@color/colorMainBlack"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:singleLine="true"
+        android:paddingStart="16sp"
+        android:hint="@string/input"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="8dp"
+        android:textSize="16sp"
+        android:textColorHint="@color/colorGray2"
+        android:textColor="@color/colorMainBlack"
+        android:background="@drawable/bg_edt_gray"
+        app:layout_constraintEnd_toStartOf="@id/btnGetVerification"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        android:layout_marginTop="84dp"
+        android:layout_width="0dp"
+        android:layout_height="52dp"/>
+
+    <Button
+        android:id="@+id/btnGetVerification"
+        app:layout_constraintTop_toTopOf="@id/etEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:paddingHorizontal="12sp"
+        android:background="@drawable/bg_button_black_enable"
+        android:text="@string/get_verification_letter"
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"/>
+
+    <EditText
+        android:id="@+id/etPhone"
+        android:singleLine="true"
+        android:paddingStart="16sp"
+        android:hint="@string/hint_verification_phone"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="8dp"
+        android:textSize="16sp"
+        android:textColorHint="@color/colorGray2"
+        android:textColor="@color/colorMainBlack"
+        android:background="@drawable/bg_edt_gray"
+        app:layout_constraintEnd_toStartOf="@id/btnGetPhoneVerification"
+        app:layout_constraintTop_toBottomOf="@id/etEmail"
+        android:layout_marginTop="8dp"
+        android:layout_width="0dp"
+        android:layout_height="52dp"/>
+
+    <Button
+        android:id="@+id/btnGetPhoneVerification"
+        app:layout_constraintTop_toTopOf="@id/etPhone"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:paddingHorizontal="12sp"
+        android:background="@drawable/bg_button_black_enable"
+        android:text="@string/get_phone_verification_letter"
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"/>
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="36dp"
+        android:text="@string/back"
+        android:textColor="@color/colorGray2"
+        android:textSize="16sp"
+        style="@style/StyleButtonBlack"
+        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnNext"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/next"
+        android:textColor="@color/colorGray2"
+        android:textSize="16sp"
+        android:layout_marginBottom="36dp"
+        android:layout_marginStart="23dp"
+        style="@style/StyleButtonBlack"
+        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnBack" />
+</androidx.constraintlayout.widget.ConstraintLayout>

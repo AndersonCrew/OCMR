@@ -1,12 +1,15 @@
 package com.example.ocmr.ui.register
 
 import android.graphics.Color
+import android.media.MediaRecorder
 import android.os.Build
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import androidx.navigation.fragment.findNavController
 import com.example.ocmr.R
 import com.example.ocmr.base.BaseFragment
 import com.example.ocmr.databinding.LoginFragmentBinding
@@ -58,7 +61,21 @@ class RegisterFragment: BaseFragment<RegisterViewModel, RegisterFragmentBinding>
                     csTermAndCondition.visibility = View.VISIBLE
                 }
             }
+
+            btnSignUp.setOnClickListener {
+                findNavController().navigate(R.id.action_registerFragment_to_registerStepFragment)
+            }
         }
+
+        object : CountDownTimer(30000, 1000) {
+            override fun onTick(millisUntilFinished: Long) {
+
+            }
+
+            override fun onFinish() {
+
+            }
+        }.start()
     }
 
     override fun initObservers() {

@@ -13,12 +13,21 @@
         <entry key="..\:/Users/admin/Desktop/Anderson/OCRM/app/src/main/res/drawable/bg_edt_gray.xml" value="0.37083333333333335" />
         <entry key="..\:/Users/admin/Desktop/Anderson/OCRM/app/src/main/res/drawable/bg_edt_red.xml" value="0.37083333333333335" />
         <entry key="..\:/Users/admin/Desktop/Anderson/OCRM/app/src/main/res/drawable/bg_edt_white.xml" value="0.37083333333333335" />
+        <entry key="..\:/Users/admin/Desktop/Anderson/OCRM/app/src/main/res/drawable/custom_seekbar.xml" value="0.37083333333333335" />
         <entry key="..\:/Users/admin/Desktop/Anderson/OCRM/app/src/main/res/drawable/ic_check_on.xml" value="0.37083333333333335" />
         <entry key="..\:/Users/admin/Desktop/Anderson/OCRM/app/src/main/res/drawable/ic_check_on_red.xml" value="0.37083333333333335" />
+        <entry key="..\:/Users/admin/Desktop/Anderson/OCRM/app/src/main/res/drawable/img_header.xml" value="0.37083333333333335" />
+        <entry key="..\:/Users/admin/Desktop/Anderson/OCRM/app/src/main/res/layout/activity_main.xml" value="0.2957427536231884" />
+        <entry key="..\:/Users/admin/Desktop/Anderson/OCRM/app/src/main/res/layout/check_area_expertise_fragment.xml" value="0.2957427536231884" />
+        <entry key="..\:/Users/admin/Desktop/Anderson/OCRM/app/src/main/res/layout/item_list_choose.xml" value="0.2957427536231884" />
         <entry key="..\:/Users/admin/Desktop/Anderson/OCRM/app/src/main/res/layout/layout_line_term_check.xml" value="0.2957427536231884" />
         <entry key="..\:/Users/admin/Desktop/Anderson/OCRM/app/src/main/res/layout/login_fragment.xml" value="0.2957427536231884" />
         <entry key="..\:/Users/admin/Desktop/Anderson/OCRM/app/src/main/res/layout/ocmr_form_layout.xml" value="0.2957427536231884" />
         <entry key="..\:/Users/admin/Desktop/Anderson/OCRM/app/src/main/res/layout/register_fragment.xml" value="0.2957427536231884" />
+        <entry key="..\:/Users/admin/Desktop/Anderson/OCRM/app/src/main/res/layout/register_step_fragment.xml" value="0.25" />
+        <entry key="..\:/Users/admin/Desktop/Anderson/OCRM/app/src/main/res/layout/select_country_fragment.xml" value="0.2957427536231884" />
+        <entry key="..\:/Users/admin/Desktop/Anderson/OCRM/app/src/main/res/layout/select_item_fragment.xml" value="0.2957427536231884" />
+        <entry key="..\:/Users/admin/Desktop/Anderson/OCRM/app/src/main/res/layout/verify_phone_number_fragment.xml" value="0.2957427536231884" />
         <entry key="app/src/main/res/drawable/bg_button.xml" value="0.33796296296296297" />
         <entry key="app/src/main/res/drawable/bg_check.xml" value="0.33796296296296297" />
         <entry key="app/src/main/res/drawable/bg_edt.xml" value="0.21458333333333332" />

@@ -34,5 +34,19 @@
 
     <fragment android:id="@+id/registerFragment"
         tools:layout="@layout/register_fragment"
-        android:name="com.example.ocmr.ui.register.RegisterFragment"/>
+        android:name="com.example.ocmr.ui.register.RegisterFragment">
+        <action
+            android:id="@+id/action_registerFragment_to_registerStepFragment"
+            app:destination="@id/registerStepFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment android:id="@+id/registerStepFragment"
+        android:name="com.example.ocmr.ui.register.RegisterStepFragment"
+        tools:layout="@layout/register_step_fragment">
+
+    </fragment>
 </navigation>

@@ -11,9 +11,21 @@ import com.example.ocmr.R
 import com.example.ocmr.base.BaseFragment
 import com.example.ocmr.databinding.LoginFragmentBinding
 import com.example.ocmr.viewmodel.LoginViewModel
+import io.socket.client.IO
+import io.socket.client.Socket
+import java.net.URISyntaxException
+import org.json.JSONException
+
+import org.json.JSONObject
+
+import io.socket.emitter.Emitter
+
+
+
 
 class LoginFragment: BaseFragment<LoginViewModel, LoginFragmentBinding>() {
 
+    private var socket: Socket?= null
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -30,16 +42,29 @@ class LoginFragment: BaseFragment<LoginViewModel, LoginFragmentBinding>() {
         }
 
         binding?.btnLogin?.setOnClickListener {
-            if(checkValidation() == null) {
-
-            } else {
-                binding?.formEmail?.onError(checkValidation()!!)
-            }
+            socket?.emit("new message", "ABC");
         }
+
+
+        try {
+            socket = IO.socket("http://chat.socket.io")
+        } catch (e: URISyntaxException) {
+            e.printStackTrace()
+        }
+
+        socket?.on("new message", onNewMessage)
+        socket?.connect()
+
     }
 
     override fun initObservers() {
 
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        socket?.disconnect()
+        socket?.off("new message", onNewMessage)
     }
 
     private fun checkValidation(): String? {
@@ -48,6 +73,24 @@ class LoginFragment: BaseFragment<LoginViewModel, LoginFragmentBinding>() {
         }
         return null
     }
+
+    private val onNewMessage =
+        Emitter.Listener { args ->
+            requireActivity().runOnUiThread(Runnable {
+                val data = args[0] as JSONObject
+                val username: String
+                val message: String
+                try {
+                    username = data.getString("username")
+                    message = data.getString("message")
+                } catch (e: JSONException) {
+                    return@Runnable
+                }
+
+                // add the message to view
+                //addMessage(username, message)
+            })
+        }
 
 
 }

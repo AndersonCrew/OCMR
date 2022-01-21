@@ -5,5 +5,7 @@
     <color name="colorMain">#FF4200</color>
     <color name="colorWhite80">#CCFFFFFF</color>
     <color name="colorMainBlack">#111111</color>
+    <color name="colorGray1">#E0E0E0</color>
+    <color name="colorGray2">#BDBDBD</color>
     <color name="colorGray3">#757575</color>
 </resources>

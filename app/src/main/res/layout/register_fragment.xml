@@ -292,6 +292,7 @@
                     android:layout_height="wrap_content"/>
 
                 <Button
+                    android:id="@+id/btnSignUp"
                     style="@style/StyleButtonBlack"
                     android:layout_marginHorizontal="20dp"
                     android:layout_marginTop="68dp"
