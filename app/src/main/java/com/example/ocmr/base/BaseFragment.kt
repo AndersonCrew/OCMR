@@ -13,16 +13,7 @@ import java.lang.reflect.ParameterizedType
  */
 abstract class BaseFragment<VM: BaseViewModel, VB: ViewBinding>: Fragment() {
     private val viewModel: VM?= null
-    private var _binding: VB? = null
-    val binding get() = _binding!!
-
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val type = javaClass.genericSuperclass
-        val clazz = (type as ParameterizedType).actualTypeArguments[0] as Class<VB>
-        val method = clazz.getMethod("inflate", LayoutInflater::class.java, ViewGroup::class.java, Boolean::class.java)
-        _binding = method.invoke(null, layoutInflater, container, false) as VB
-        return _binding!!.root
-    }
+    var binding: VB? = null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -36,6 +27,6 @@ abstract class BaseFragment<VM: BaseViewModel, VB: ViewBinding>: Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
-        _binding = null
+        binding = null
     }
 }

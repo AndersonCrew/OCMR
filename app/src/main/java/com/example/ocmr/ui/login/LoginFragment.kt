@@ -1,30 +1,23 @@
-package com.example.ocmr.ui.splash
+package com.example.ocmr.ui.login
 
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.navigation.fragment.findNavController
 import com.example.ocmr.R
 import com.example.ocmr.base.BaseFragment
-import com.example.ocmr.databinding.SplashFragmentBinding
-import com.example.ocmr.viewmodel.SplashViewModel
+import com.example.ocmr.databinding.LoginFragmentBinding
+import com.example.ocmr.viewmodel.LoginViewModel
 
-/**
- * Created by BM Anderson on 18/01/2022.
- */
-class SplashFragment: BaseFragment<SplashViewModel, SplashFragmentBinding>() {
+class LoginFragment: BaseFragment<LoginViewModel, LoginFragmentBinding>() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = SplashFragmentBinding.inflate(inflater, container, false)
+        binding = LoginFragmentBinding.inflate(inflater, container, false)
 
         return binding?.root
     }
@@ -53,13 +46,20 @@ class SplashFragment: BaseFragment<SplashViewModel, SplashFragmentBinding>() {
         activity?.window?.statusBarColor = Color.TRANSPARENT
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        activity?.window?.statusBarColor = Color.WHITE
+    }
+
     override fun initViews() {
-        Handler(Looper.getMainLooper()).postDelayed({
-            findNavController().navigate(R.id.action_splashFragment_to_loginFragment)
-        }, 2000)
+        binding?.tvRegister?.setOnClickListener {
+            findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
+        }
     }
 
     override fun initObservers() {
 
     }
+
+
 }
