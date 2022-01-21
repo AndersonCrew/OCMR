@@ -17,64 +17,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tvEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+    <com.example.ocmr.custom.OcmrForm
+        android:id="@+id/formEmail"
+        app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="244dp"
-        android:text="@string/email"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:strTitle="@string/email"
+        app:colorForm="0"
+        app:strHint="@string/hint_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
-    <EditText
-        android:id="@+id/etEmail"
-        android:layout_width="0dp"
-        android:layout_height="52dp"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="8dp"
-        android:singleLine="true"
-        android:background="@drawable/bg_edt_white"
-        android:hint="@string/hint_email"
-        android:paddingHorizontal="16dp"
-        android:textColor="@color/white"
-        android:textColorHint="#99FFFFFF"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvEmail" />
-
-    <TextView
-        android:id="@+id/tvPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="28dp"
-        android:text="@string/password"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etEmail" />
-
-    <EditText
-        android:id="@+id/etPassword"
-        android:layout_width="0dp"
-        android:layout_height="52dp"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="8dp"
-        android:singleLine="true"
-        android:background="@drawable/bg_edt_white"
-        android:hint="@string/hint_password"
-        android:paddingHorizontal="16dp"
-        android:textColor="@color/white"
-        android:textColorHint="#99FFFFFF"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvPassword" />
-
+    <com.example.ocmr.custom.OcmrForm
+        android:id="@+id/formPassword"
+       android:layout_marginTop="28dp"
+        app:strTitle="@string/password"
+        app:colorForm="0"
+        app:layout_constraintTop_toBottomOf="@id/formEmail"
+        app:strHint="@string/hint_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
     <Button
         android:id="@+id/btnLogin"
         style="@style/StyleButtonRed"
@@ -85,7 +46,7 @@
         android:text="@string/login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etPassword" />
+        app:layout_constraintTop_toBottomOf="@id/formPassword" />
 
     <View
         android:id="@+id/vCenter"

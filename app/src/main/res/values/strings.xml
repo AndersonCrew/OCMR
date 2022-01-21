@@ -16,4 +16,10 @@
     <string name="hint_password_required">영문+숫자 조합 8자리 이상 입력</string>
     <string name="confirm_password">비밀번호 확인</string>
     <string name="hint_confirm_password">비밀번호 재입력</string>
+    <string name="accept_term_and_condition">약관 동의</string>
+    <string name="agreement_to_the_terms_and_conditions_by_guarantee">보증에 의한 약관 동의</string>
+    <string name="five_times_sef_pay">(5배 자부담)</string>
+    <string name="i_agree_with_all_term_condition">전체 약관에 동의합니다.</string>
+    <string name="private_policy">개인정보 취급방침 (필수)</string>
+    <string name="sign_up">회원가입</string>
 </resources>

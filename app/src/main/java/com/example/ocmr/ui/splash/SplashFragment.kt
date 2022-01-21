@@ -29,30 +29,6 @@ class SplashFragment: BaseFragment<SplashViewModel, SplashFragmentBinding>() {
         return binding?.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        requireActivity().window?.apply {
-            decorView.systemUiVisibility =
-                View.SYSTEM_UI_FLAG_LAYOUT_STABLE or
-                        View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                var flags: Int = decorView.systemUiVisibility
-                flags = flags or View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                decorView.systemUiVisibility = flags
-            }
-
-            navigationBarColor = Color.WHITE
-        }
-
-    }
-
-    override fun onResume() {
-        super.onResume()
-        activity?.window?.statusBarColor = Color.TRANSPARENT
-    }
-
     override fun initViews() {
         Handler(Looper.getMainLooper()).postDelayed({
             findNavController().navigate(R.id.action_splashFragment_to_loginFragment)

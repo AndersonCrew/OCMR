@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="OcmrForm">
+        <attr name="colorTitle" format="color"/>
+        <attr name="colorForm" format="integer"/>
+        <attr name="colorTextForm" format="color"/>
+        <attr name="colorHint" format="color"/>
+        <attr name="textSizeForm" format="dimension"/>
+        <attr name="strTitle" format="string"/>
+        <attr name="strHint" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="LineTermCheck">
+
+        <attr name="title" format="string"/>
+    </declare-styleable>
+</resources>

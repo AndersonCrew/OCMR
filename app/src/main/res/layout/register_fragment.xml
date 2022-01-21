@@ -3,10 +3,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingTop="28dp"
+    android:fillViewport="true"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
+        android:animateLayoutChanges="true"
         android:layout_height="match_parent">
         <ImageView
             android:id="@+id/imgBack"
@@ -17,212 +21,289 @@
             android:layout_width="48dp"
             android:layout_height="48dp"/>
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardHelpCraftsman"
-            android:layout_marginTop="8dp"
-            android:layout_marginHorizontal="20dp"
-            app:cardCornerRadius="5dp"
+        <androidx.core.widget.NestedScrollView
             app:layout_constraintTop_toBottomOf="@id/imgBack"
+            app:layout_constraintBottom_toBottomOf="parent"
             android:layout_width="match_parent"
-            android:layout_height="80dp">
+            android:layout_height="0dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:background="@color/black"
                 android:layout_width="match_parent"
+                android:animateLayoutChanges="true"
+                android:paddingBottom="48dp"
                 android:layout_height="match_parent">
-                <CheckBox
-                    app:layout_constraintStart_toStartOf="parent"
-                    android:layout_marginStart="16dp"
-                    android:checked="true"
-                    app:layout_constraintBottom_toBottomOf="parent"
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardHelpCraftsman"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginHorizontal="20dp"
+                    app:cardCornerRadius="5dp"
                     app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/csHelpCraftsman"
+                        android:background="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <CheckBox
+                            android:id="@+id/ckHelpCraftsman"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginStart="16dp"
+                            android:checked="true"
+                            android:enabled="false"
+                            android:button="@android:color/transparent"
+                            android:background="@drawable/bg_check"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"/>
+
+                        <TextView
+                            android:id="@+id/tvTitle"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginStart="60dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:text="@string/sign_up_as_customer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/tvMessageHelpCraftsman"
+                            android:textColor="@color/colorWhite80"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginStart="60dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:text="@string/i_want_to_help_from_craftsmain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardJoinMaster"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginHorizontal="20dp"
+                    app:cardCornerRadius="5dp"
+                    app:layout_constraintTop_toBottomOf="@id/cardHelpCraftsman"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/csJoinMaster"
+                        android:background="@color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <CheckBox
+                            android:id="@+id/ckJoinMaster"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginStart="16dp"
+                            android:enabled="false"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:button="@android:color/transparent"
+                            android:background="@drawable/bg_check"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"/>
+
+                        <TextView
+                            android:id="@+id/tvTitleJoinMaster"
+                            android:textColor="@color/colorMainBlack"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginStart="60dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:text="@string/join_a_master"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/tvMessageJoinMaster"
+                            android:textColor="@color/colorGray3"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginStart="60dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:text="@string/i_want_to_meet_customer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/csTermAndCondition"
+                    android:visibility="gone"
+                    android:paddingHorizontal="20dp"
+                    app:layout_constraintTop_toBottomOf="@id/cardJoinMaster"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvAcceptTC"
+                        android:layout_marginTop="28dp"
+                        android:textColor="@color/colorMainBlack"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:text="@string/accept_term_and_condition"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/tvMsg1"
+                        app:layout_constraintTop_toBottomOf="@id/tvAcceptTC"
+                        android:layout_marginTop="4dp"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorMain"
+                        android:text="@string/agreement_to_the_terms_and_conditions_by_guarantee"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        app:layout_constraintStart_toEndOf="@id/tvMsg1"
+                        app:layout_constraintTop_toTopOf="@id/tvMsg1"
+                        android:layout_marginStart="4dp"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorGray3"
+                        android:text="@string/five_times_sef_pay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <com.example.ocmr.custom.LineTermCheck
+                        android:id="@+id/lineAgreeTerm"
+                        android:layout_marginTop="32dp"
+                        app:title="@string/i_agree_with_all_term_condition"
+                        app:layout_constraintTop_toBottomOf="@id/tvMsg1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <com.example.ocmr.custom.LineTermCheck
+                        android:id="@+id/linePolicy1"
+                        android:layout_marginTop="20dp"
+                        app:title="@string/private_policy"
+                        app:layout_constraintTop_toBottomOf="@id/lineAgreeTerm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <com.example.ocmr.custom.LineTermCheck
+                        android:id="@+id/linePolicy2"
+                        android:layout_marginTop="20dp"
+                        app:title="@string/private_policy"
+                        app:layout_constraintTop_toBottomOf="@id/linePolicy1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <com.example.ocmr.custom.LineTermCheck
+                        android:id="@+id/linePolicy3"
+                        android:layout_marginTop="20dp"
+                        app:title="@string/private_policy"
+                        app:layout_constraintTop_toBottomOf="@id/linePolicy2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <com.example.ocmr.custom.LineTermCheck
+                        android:id="@+id/linePolicy4"
+                        android:layout_marginTop="20dp"
+                        app:title="@string/private_policy"
+                        app:layout_constraintTop_toBottomOf="@id/linePolicy3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <com.example.ocmr.custom.LineTermCheck
+                        android:id="@+id/linePolicy5"
+                        android:layout_marginTop="20dp"
+                        app:title="@string/private_policy"
+                        app:layout_constraintTop_toBottomOf="@id/linePolicy4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.example.ocmr.custom.OcmrForm
+                    android:id="@+id/formEmail"
+                    app:colorTitle="@color/colorMainBlack"
+                    app:colorTextForm="@color/colorMainBlack"
+                    app:colorForm="1"
+                    app:colorHint="@color/colorGray3"
+                    android:layout_marginTop="32dp"
+                    app:strTitle="@string/email"
+                    app:strHint="@string/enter_your_email"
+                    app:layout_constraintTop_toBottomOf="@id/csTermAndCondition"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <com.example.ocmr.custom.OcmrForm
+                    android:id="@+id/formPassword"
+                    app:colorTitle="@color/colorMainBlack"
+                    app:colorTextForm="@color/colorMainBlack"
+                    app:colorForm="1"
+                    app:colorHint="@color/colorGray3"
+                    android:layout_marginTop="32dp"
+                    app:strTitle="@string/password"
+                    app:strHint="@string/hint_password_required"
+                    app:layout_constraintTop_toBottomOf="@id/formEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <com.example.ocmr.custom.OcmrForm
+                    android:id="@+id/formConfirmPassword"
+                    app:colorTitle="@color/colorMainBlack"
+                    app:colorTextForm="@color/colorMainBlack"
+                    app:colorForm="1"
+                    app:colorHint="@color/colorGray3"
+                    android:layout_marginTop="32dp"
+                    app:strTitle="@string/confirm_password"
+                    app:strHint="@string/hint_confirm_password"
+                    app:layout_constraintTop_toBottomOf="@id/formPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+                <CheckBox
+                    android:id="@+id/ckTermCondition"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintTop_toBottomOf="@id/formConfirmPassword"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="20dp"
                     android:button="@drawable/bg_check"
                     android:layout_width="20dp"
                     android:layout_height="20dp"/>
 
                 <TextView
-                    android:textColor="@color/white"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginStart="60dp"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    android:text="@string/sign_up_as_customer"
+                    android:layout_marginStart="12dp"
+                    app:layout_constraintTop_toTopOf="@id/ckTermCondition"
+                    app:layout_constraintBottom_toBottomOf="@id/ckTermCondition"
+                    app:layout_constraintStart_toEndOf="@id/ckTermCondition"
+                    android:text="이용약관 및 개인정보처리방침에 동의합니다.(필수)"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
-                <TextView
-                    android:textColor="#CCFFFFFF"
-                    android:textSize="12sp"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="20dp"
-                    android:layout_marginStart="60dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    android:text="@string/i_want_to_help_from_craftsmain"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                <Button
+                    style="@style/StyleButtonBlack"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="68dp"
+                    android:text="@string/sign_up"
+                    app:layout_constraintTop_toBottomOf="@id/ckTermCondition"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardjoinMaster"
-            android:layout_marginTop="12dp"
-            android:layout_marginHorizontal="20dp"
-            app:cardCornerRadius="5dp"
-            app:layout_constraintTop_toBottomOf="@id/cardHelpCraftsman"
-            android:layout_width="match_parent"
-            android:layout_height="80dp">
+        </androidx.core.widget.NestedScrollView>
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:background="@color/white"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <CheckBox
-                    app:layout_constraintStart_toStartOf="parent"
-                    android:layout_marginStart="16dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:button="@drawable/bg_check"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"/>
 
-                <TextView
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginStart="60dp"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    android:text="@string/join_a_master"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-                <TextView
-                    android:textColor="#CC000000"
-                    android:textSize="12sp"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="20dp"
-                    android:layout_marginStart="60dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    android:text="@string/i_want_to_meet_customer"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
-
-        <TextView
-            android:id="@+id/tvEmail"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:layout_marginTop="28dp"
-            android:text="@string/email"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="20dp"
-            app:layout_constraintTop_toBottomOf="@id/cardjoinMaster"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <EditText
-            android:id="@+id/etEmail"
-            android:layout_marginTop="16dp"
-            android:hint="@string/enter_your_email"
-            android:textSize="16sp"
-            android:textColorHint="#BDBDBD"
-            android:paddingHorizontal="16dp"
-            android:singleLine="true"
-            app:layout_constraintTop_toBottomOf="@id/tvEmail"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:background="@drawable/bg_edt_gray"
-            android:layout_marginHorizontal="20dp"
-            android:layout_width="0dp"
-            android:layout_height="52dp"/>
-
-        <TextView
-            android:id="@+id/tvPassword"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:layout_marginTop="28dp"
-            android:text="@string/password"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="20dp"
-            app:layout_constraintTop_toBottomOf="@id/etEmail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <EditText
-            android:id="@+id/etPassword"
-            android:layout_marginTop="16dp"
-            app:layout_constraintTop_toBottomOf="@id/tvPassword"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:textSize="16sp"
-            android:paddingHorizontal="16dp"
-            android:singleLine="true"
-            android:textColorHint="#BDBDBD"
-            android:hint="@string/hint_password_required"
-            app:layout_constraintStart_toStartOf="parent"
-            android:background="@drawable/bg_edt_gray"
-            android:layout_marginHorizontal="20dp"
-            android:layout_width="0dp"
-            android:layout_height="52dp"/>
-
-        <TextView
-            android:id="@+id/tvConfirmPassword"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:layout_marginTop="28dp"
-            android:text="@string/confirm_password"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="20dp"
-            app:layout_constraintTop_toBottomOf="@id/etPassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <EditText
-            android:id="@+id/etConfirmPassword"
-            android:layout_marginTop="16dp"
-            app:layout_constraintTop_toBottomOf="@id/tvConfirmPassword"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:textSize="16sp"
-            android:paddingHorizontal="16dp"
-            android:singleLine="true"
-            android:textColorHint="#BDBDBD"
-            android:hint="@string/hint_confirm_password"
-            app:layout_constraintStart_toStartOf="parent"
-            android:background="@drawable/bg_edt_gray"
-            android:layout_marginHorizontal="20dp"
-            android:layout_width="0dp"
-            android:layout_height="52dp"/>
-
-        <CheckBox
-            android:id="@+id/ckTermCondition"
-            android:layout_marginTop="16dp"
-            app:layout_constraintTop_toBottomOf="@id/etConfirmPassword"
-            app:layout_constraintStart_toStartOf="@id/etConfirmPassword"
-            android:button="@drawable/bg_check"
-            android:layout_width="20dp"
-            android:layout_height="20dp"/>
-
-        <TextView
-            android:layout_marginStart="12dp"
-            app:layout_constraintTop_toTopOf="@id/ckTermCondition"
-            app:layout_constraintBottom_toBottomOf="@id/ckTermCondition"
-            app:layout_constraintStart_toEndOf="@id/ckTermCondition"
-            android:text="이용약관 및 개인정보처리방침에 동의합니다.(필수)"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <Button
-            style="@style/StyleButtonRed"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="56dp"
-            app:layout_constraintTop_toBottomOf="@id/ckTermCondition"
-            android:layout_width="match_parent"
-            android:layout_height="52dp"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

@@ -4,6 +4,21 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.33796296296296297" />
+        <entry key="..\:/Users/admin/Desktop/Anderson/OCRM/app/src/main/res/drawable/bg_button.xml" value="0.37083333333333335" />
+        <entry key="..\:/Users/admin/Desktop/Anderson/OCRM/app/src/main/res/drawable/bg_button_black.xml" value="0.37083333333333335" />
+        <entry key="..\:/Users/admin/Desktop/Anderson/OCRM/app/src/main/res/drawable/bg_button_black_disable.xml" value="0.37083333333333335" />
+        <entry key="..\:/Users/admin/Desktop/Anderson/OCRM/app/src/main/res/drawable/bg_button_black_enable.xml" value="0.37083333333333335" />
+        <entry key="..\:/Users/admin/Desktop/Anderson/OCRM/app/src/main/res/drawable/bg_check.xml" value="0.37083333333333335" />
+        <entry key="..\:/Users/admin/Desktop/Anderson/OCRM/app/src/main/res/drawable/bg_check_red.xml" value="0.37083333333333335" />
+        <entry key="..\:/Users/admin/Desktop/Anderson/OCRM/app/src/main/res/drawable/bg_edt_gray.xml" value="0.37083333333333335" />
+        <entry key="..\:/Users/admin/Desktop/Anderson/OCRM/app/src/main/res/drawable/bg_edt_red.xml" value="0.37083333333333335" />
+        <entry key="..\:/Users/admin/Desktop/Anderson/OCRM/app/src/main/res/drawable/bg_edt_white.xml" value="0.37083333333333335" />
+        <entry key="..\:/Users/admin/Desktop/Anderson/OCRM/app/src/main/res/drawable/ic_check_on.xml" value="0.37083333333333335" />
+        <entry key="..\:/Users/admin/Desktop/Anderson/OCRM/app/src/main/res/drawable/ic_check_on_red.xml" value="0.37083333333333335" />
+        <entry key="..\:/Users/admin/Desktop/Anderson/OCRM/app/src/main/res/layout/layout_line_term_check.xml" value="0.2957427536231884" />
+        <entry key="..\:/Users/admin/Desktop/Anderson/OCRM/app/src/main/res/layout/login_fragment.xml" value="0.2957427536231884" />
+        <entry key="..\:/Users/admin/Desktop/Anderson/OCRM/app/src/main/res/layout/ocmr_form_layout.xml" value="0.2957427536231884" />
+        <entry key="..\:/Users/admin/Desktop/Anderson/OCRM/app/src/main/res/layout/register_fragment.xml" value="0.2957427536231884" />
         <entry key="app/src/main/res/drawable/bg_button.xml" value="0.33796296296296297" />
         <entry key="app/src/main/res/drawable/bg_check.xml" value="0.33796296296296297" />
         <entry key="app/src/main/res/drawable/bg_edt.xml" value="0.21458333333333332" />

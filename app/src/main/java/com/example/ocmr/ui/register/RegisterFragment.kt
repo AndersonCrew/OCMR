@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
+import com.example.ocmr.R
 import com.example.ocmr.base.BaseFragment
 import com.example.ocmr.databinding.LoginFragmentBinding
 import com.example.ocmr.databinding.RegisterFragmentBinding
@@ -23,26 +25,40 @@ class RegisterFragment: BaseFragment<RegisterViewModel, RegisterFragmentBinding>
         return binding?.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        requireActivity().window?.apply {
-            decorView.systemUiVisibility =
-                View.SYSTEM_UI_FLAG_VISIBLE
-
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                var flags: Int = decorView.systemUiVisibility
-                flags = flags or View.SYSTEM_UI_FLAG_VISIBLE
-                decorView.systemUiVisibility = flags
+    override fun initViews() {
+        binding?.apply {
+            cardHelpCraftsman.setOnClickListener {
+                if (ckHelpCraftsman.isChecked) {
+                    csHelpCraftsman.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.white))
+                    ckHelpCraftsman.isChecked = false
+                    tvTitle.setTextColor(ContextCompat.getColor(requireContext(), R.color.colorMainBlack))
+                    tvMessageHelpCraftsman.setTextColor(ContextCompat.getColor(requireContext(), R.color.colorGray3))
+                } else {
+                    csHelpCraftsman.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.black))
+                    ckHelpCraftsman.isChecked = true
+                    tvTitle.setTextColor(ContextCompat.getColor(requireContext(), R.color.white))
+                    tvMessageHelpCraftsman.setTextColor(ContextCompat.getColor(requireContext(), R.color.colorWhite80))
+                }
             }
 
-            navigationBarColor = Color.WHITE
+            cardJoinMaster.setOnClickListener {
+                if (ckJoinMaster.isChecked) {
+                    csJoinMaster.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.white))
+                    ckJoinMaster.isChecked = false
+                    tvTitleJoinMaster.setTextColor(ContextCompat.getColor(requireContext(), R.color.colorMainBlack))
+                    tvMessageJoinMaster.setTextColor(ContextCompat.getColor(requireContext(), R.color.colorGray3))
+
+                    csTermAndCondition.visibility = View.GONE
+                } else {
+                    csJoinMaster.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.black))
+                    ckJoinMaster.isChecked = true
+                    tvTitleJoinMaster.setTextColor(ContextCompat.getColor(requireContext(), R.color.white))
+                    tvMessageJoinMaster.setTextColor(ContextCompat.getColor(requireContext(), R.color.colorWhite80))
+
+                    csTermAndCondition.visibility = View.VISIBLE
+                }
+            }
         }
-
-    }
-
-    override fun initViews() {
-
     }
 
     override fun initObservers() {
