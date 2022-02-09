@@ -1,10 +1,6 @@
-package com.example.ocmr.ui.login
+package com.example.ocmr.ui.customer.login
 
-import android.graphics.Color
-import android.os.Build
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.view.*
 import androidx.navigation.fragment.findNavController
 import com.example.ocmr.R

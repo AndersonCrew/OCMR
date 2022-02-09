@@ -1,8 +1,5 @@
 package com.example.ocmr.ui.register
 
-import android.graphics.Color
-import android.media.MediaRecorder
-import android.os.Build
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.LayoutInflater
@@ -12,7 +9,6 @@ import androidx.core.content.ContextCompat
 import androidx.navigation.fragment.findNavController
 import com.example.ocmr.R
 import com.example.ocmr.base.BaseFragment
-import com.example.ocmr.databinding.LoginFragmentBinding
 import com.example.ocmr.databinding.RegisterFragmentBinding
 import com.example.ocmr.viewmodel.RegisterViewModel
 

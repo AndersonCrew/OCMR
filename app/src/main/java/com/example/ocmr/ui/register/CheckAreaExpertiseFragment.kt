@@ -8,7 +8,6 @@ import androidx.navigation.fragment.findNavController
 import com.example.ocmr.R
 import com.example.ocmr.base.BaseFragment
 import com.example.ocmr.databinding.CheckAreaExpertiseFragmentBinding
-import com.example.ocmr.databinding.RegisterFragmentBinding
 import com.example.ocmr.viewmodel.RegisterViewModel
 
 class CheckAreaExpertiseFragment: BaseFragment<RegisterViewModel, CheckAreaExpertiseFragmentBinding>() {

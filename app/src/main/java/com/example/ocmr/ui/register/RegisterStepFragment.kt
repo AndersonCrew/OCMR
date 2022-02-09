@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.ocmr.base.BaseFragment
 import com.example.ocmr.databinding.RegisterStepFragmentBinding
-import com.example.ocmr.databinding.SplashFragmentBinding
 import com.example.ocmr.viewmodel.RegisterViewModel
 
 class RegisterStepFragment: BaseFragment<RegisterViewModel, RegisterStepFragmentBinding>() {
