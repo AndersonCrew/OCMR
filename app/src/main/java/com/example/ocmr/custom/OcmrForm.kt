@@ -1,6 +1,7 @@
 package com.example.ocmr.custom
 
 import android.content.Context
+import android.content.res.ColorStateList
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.AttributeSet
@@ -18,10 +19,7 @@ class OcmrForm  @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
 
-    private var colorTitle: Int?= null
-    private var colorForm: Int?= null
-    private var colorHintForm: Int?= null
-    private var colorTextForm: Int?= null
+    private var typeForm: Int = 0
     private var binding: OcmrFormLayoutBinding?= null
     private var strTitle: String?= ""
     private var strHint: String?= ""
@@ -31,11 +29,7 @@ class OcmrForm  @JvmOverloads constructor(
 
         val ta = context.obtainStyledAttributes(attrs, R.styleable.OcmrForm)
         try {
-            colorTitle = ta.getColor(R.styleable.OcmrForm_colorTitle, ContextCompat.getColor(context, R.color.white))
-            colorForm = ta.getInt(R.styleable.OcmrForm_colorForm, 0)
-            colorHintForm = ta.getColor(R.styleable.OcmrForm_colorHint, ContextCompat.getColor(context, R.color.white))
-            colorTextForm = ta.getColor(R.styleable.OcmrForm_colorTextForm, ContextCompat.getColor(context, R.color.white))
-
+            typeForm = ta.getInt(R.styleable.OcmrForm_typeForm, 0)
             strTitle = ta.getString(R.styleable.OcmrForm_strTitle)
             strHint = ta.getString(R.styleable.OcmrForm_strHint)
         } finally {
@@ -44,13 +38,10 @@ class OcmrForm  @JvmOverloads constructor(
 
         binding?.etForm?.apply {
             hint = strHint
-            setHintTextColor(colorHintForm!!)
-            setTextColor(colorTextForm!!)
+            setHintTextColor(if(typeForm == 0) ContextCompat.getColor(context, R.color.colorWhite60) else ContextCompat.getColor(context, R.color.colorGray2))
+            setTextColor(if(typeForm == 0) ContextCompat.getColor(context, R.color.white) else ContextCompat.getColor(context, R.color.colorMainBlack))
+            setBackgroundResource(if(typeForm == 0) R.drawable.bg_edt_white_50 else R.drawable.bg_edt_gray)
 
-            when(colorForm) {
-                0 -> setBackgroundResource(R.drawable.bg_edt_white)
-                else -> setBackgroundResource(R.drawable.bg_edt_gray)
-            }
 
             addTextChangedListener(object : TextWatcher {
                 override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
@@ -62,7 +53,7 @@ class OcmrForm  @JvmOverloads constructor(
                 }
 
                 override fun afterTextChanged(p0: Editable?) {
-                    binding?.etForm?.setBackgroundResource(if(colorForm == 0) R.drawable.bg_edt_white else R.drawable.bg_edt_gray)
+
                     binding?.tvError?.apply {
                         visibility = View.GONE
                         text = ""
@@ -71,11 +62,20 @@ class OcmrForm  @JvmOverloads constructor(
 
             })
 
+            onFocusChangeListener = OnFocusChangeListener { _, isFocus ->
+                if(isFocus) {
+                    binding?.etForm?.setBackgroundResource(if(typeForm == 0) R.drawable.bg_edt_white else R.drawable.bg_edt_main_black)
+                } else {
+                    binding?.etForm?.setBackgroundResource(if(typeForm == 0) R.drawable.bg_edt_white_50 else R.drawable.bg_edt_gray)
+                }
+            }
+
         }
 
         binding?.tvTitle?.apply {
+            visibility = if (strTitle.isNullOrEmpty()) View.GONE else View.VISIBLE
             text = strTitle
-            setTextColor(colorTitle!!)
+            setTextColor(if(typeForm == 0) ContextCompat.getColor(context, R.color.white) else ContextCompat.getColor(context, R.color.colorMainBlack))
         }
 
     }

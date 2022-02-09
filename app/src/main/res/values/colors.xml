@@ -4,6 +4,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="colorMain">#FF4200</color>
     <color name="colorWhite80">#CCFFFFFF</color>
+    <color name="colorWhite60">#99FFFFFF</color>
     <color name="colorMainBlack">#111111</color>
     <color name="colorGray1">#E0E0E0</color>
     <color name="colorGray2">#BDBDBD</color>

@@ -33,4 +33,17 @@
     <string name="input">입력</string>
     <string name="get_phone_verification_letter">인증확인</string>
     <string name="hint_verification_phone">인증번호 입력</string>
+    <string name="permission_denied">Permission Denied</string>
+    <string name="ok">Ok</string>
+    <string name="please_check_your_phone_number">휴대폰 인증을 해주세요</string>
+    <string name="time_count_resend_code">인증번호가 발송되었습니다 (남은 횟수 5회)</string>
+    <string name="find_password">비밀번호 찾기</string>
+    <string name="phone_number">휴대폰 번호</string>
+    <string name="enter_your_phone_number">휴대폰 번호 입력</string>
+    <string name="certification_number_input">인증번호 입력</string>
+    <string name="certification">인증</string>
+    <string name="please_set_new_password">새로운 비밀번호를 설정해주세요</string>
+    <string name="enter_new_password">새 비밀번호 입력</string>
+    <string name="enter_confirm_password">비밀번호 확인</string>
+    <string name="change">변경하기</string>
 </resources>

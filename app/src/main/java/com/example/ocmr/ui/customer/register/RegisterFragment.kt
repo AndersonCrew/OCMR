@@ -1,4 +1,4 @@
-package com.example.ocmr.ui.register
+package com.example.ocmr.ui.customer.register
 
 import android.os.Bundle
 import android.os.CountDownTimer

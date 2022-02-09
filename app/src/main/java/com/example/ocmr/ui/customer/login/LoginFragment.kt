@@ -37,6 +37,10 @@ class LoginFragment: BaseFragment<LoginViewModel, LoginFragmentBinding>() {
             findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
         }
 
+        binding?.tvForgotPassword?.setOnClickListener {
+            findNavController().navigate(R.id.action_loginFragment_to_forgotPasswordFragment)
+        }
+
         binding?.btnLogin?.setOnClickListener {
             socket?.emit("new message", "ABC");
         }

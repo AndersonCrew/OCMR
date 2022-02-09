@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="OcmrForm">
-        <attr name="colorTitle" format="color"/>
-        <attr name="colorForm" format="integer"/>
-        <attr name="colorTextForm" format="color"/>
-        <attr name="colorHint" format="color"/>
+        <attr name="typeForm" format="integer"/>
         <attr name="textSizeForm" format="dimension"/>
         <attr name="strTitle" format="string"/>
         <attr name="strHint" format="string"/>

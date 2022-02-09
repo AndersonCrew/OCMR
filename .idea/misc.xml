@@ -29,17 +29,33 @@
         <entry key="..\:/Users/admin/Desktop/Anderson/OCRM/app/src/main/res/layout/select_item_fragment.xml" value="0.2957427536231884" />
         <entry key="..\:/Users/admin/Desktop/Anderson/OCRM/app/src/main/res/layout/verify_phone_number_fragment.xml" value="0.2957427536231884" />
         <entry key="app/src/main/res/drawable/bg_button.xml" value="0.33796296296296297" />
+        <entry key="app/src/main/res/drawable/bg_button_black.xml" value="0.27708333333333335" />
+        <entry key="app/src/main/res/drawable/bg_button_black_2.xml" value="0.27708333333333335" />
+        <entry key="app/src/main/res/drawable/bg_button_black_disable.xml" value="0.27708333333333335" />
+        <entry key="app/src/main/res/drawable/bg_button_black_disable_2.xml" value="0.27708333333333335" />
         <entry key="app/src/main/res/drawable/bg_check.xml" value="0.33796296296296297" />
         <entry key="app/src/main/res/drawable/bg_edt.xml" value="0.21458333333333332" />
         <entry key="app/src/main/res/drawable/bg_edt_gray.xml" value="0.33796296296296297" />
+        <entry key="app/src/main/res/drawable/bg_edt_main_black.xml" value="0.294140625" />
         <entry key="app/src/main/res/drawable/bg_edt_white.xml" value="0.33796296296296297" />
+        <entry key="app/src/main/res/drawable/bg_edt_white_50.xml" value="0.294140625" />
         <entry key="app/src/main/res/drawable/bg_splash.xml" value="0.28703703703703703" />
+        <entry key="app/src/main/res/drawable/ic_apple.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_check_off.xml" value="0.33796296296296297" />
         <entry key="app/src/main/res/drawable/ic_check_on.xml" value="0.33796296296296297" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.37604166666666666" />
-        <entry key="app/src/main/res/layout/login_fragment.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/enter_personal_information_fragment.xml" value="0.28203125" />
+        <entry key="app/src/main/res/layout/forgot_password_fragment.xml" value="0.28203125" />
+        <entry key="app/src/main/res/layout/login_fragment.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/ocmr_form_layout.xml" value="0.28203125" />
         <entry key="app/src/main/res/layout/register_fragment.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/register_step_fragment.xml" value="0.28203125" />
+        <entry key="app/src/main/res/layout/select_country_fragment.xml" value="0.28203125" />
+        <entry key="app/src/main/res/layout/select_item_fragment.xml" value="0.28203125" />
+        <entry key="app/src/main/res/layout/set_new_password_fragment.xml" value="0.28203125" />
         <entry key="app/src/main/res/layout/splash_fragment.xml" value="0.21197916666666666" />
+        <entry key="app/src/main/res/layout/verification_phonenumber_fragment.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/verify_phone_number_fragment.xml" value="0.28203125" />
       </map>
     </option>
   </component>

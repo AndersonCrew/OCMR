@@ -5,6 +5,7 @@
     app:startDestination="@id/splashFragment"
     android:id="@+id/nav_graph">
 
+    <!--SplashFragment-->
     <fragment
         android:id="@+id/splashFragment"
         tools:layout="@layout/splash_fragment"
@@ -20,9 +21,12 @@
             app:popExitAnim="@anim/slide_out_right" />
     </fragment>
 
+    <!--LoginFragment-->
     <fragment android:id="@+id/loginFragment"
         tools:layout="@layout/login_fragment"
         android:name="com.example.ocmr.ui.customer.login.LoginFragment">
+
+        <!--Sign Up By Email-->
         <action
             android:id="@+id/action_loginFragment_to_registerFragment"
             app:destination="@id/registerFragment"
@@ -30,11 +34,21 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+
+        <!--Sign Up By Email-->
+        <action
+            android:id="@+id/action_loginFragment_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
 
+    <!--RegisterFragment-->
     <fragment android:id="@+id/registerFragment"
         tools:layout="@layout/register_fragment"
-        android:name="com.example.ocmr.ui.register.RegisterFragment">
+        android:name="com.example.ocmr.ui.customer.register.RegisterFragment">
         <action
             android:id="@+id/action_registerFragment_to_registerStepFragment"
             app:destination="@id/registerStepFragment"
@@ -44,9 +58,29 @@
             app:popExitAnim="@anim/slide_out_right" />
     </fragment>
 
+    <!--RegisterStepFragment-->
     <fragment android:id="@+id/registerStepFragment"
-        android:name="com.example.ocmr.ui.register.RegisterStepFragment"
-        tools:layout="@layout/register_step_fragment">
+        android:name="com.example.ocmr.ui.customer.register.RegisterStepFragment"
+        tools:layout="@layout/register_step_fragment"/>
 
+    <!--ForgotPasswordFragment-->
+    <fragment android:id="@+id/forgotPasswordFragment"
+        android:name="com.example.ocmr.ui.customer.forgot_password.ForgotPasswordFragment"
+        tools:layout="@layout/forgot_password_fragment">
+
+    <!--Set New Password-->
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_setNewPasswordFragment"
+            app:destination="@id/setNewPasswordFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
+
+    <!--SetNewPasswordFragment-->
+    <fragment android:id="@+id/setNewPasswordFragment"
+        android:name="com.example.ocmr.ui.customer.forgot_password.SetNewPasswordFragment"
+        tools:layout="@layout/set_new_password_fragment"/>
+
 </navigation>

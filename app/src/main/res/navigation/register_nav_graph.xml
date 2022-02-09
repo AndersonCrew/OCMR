@@ -6,8 +6,8 @@
     android:id="@+id/register_nav_graph">
 
     <fragment android:id="@+id/checkAreaExpertiseFragment"
-        tools:layout="@layout/check_area_expertise_fragment"
-        android:name="com.example.ocmr.ui.register.CheckAreaExpertiseFragment">
+        tools:layout="@layout/verification_phonenumber_fragment"
+        android:name="com.example.ocmr.ui.customer.register.VerificationPhoneNumberFragment">
 
         <action android:id="@+id/action_checkArea_to_select_item"
             app:destination="@id/selectItemFragment"/>
