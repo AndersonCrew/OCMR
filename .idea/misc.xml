@@ -33,6 +33,8 @@
         <entry key="app/src/main/res/drawable/bg_button_black_2.xml" value="0.27708333333333335" />
         <entry key="app/src/main/res/drawable/bg_button_black_disable.xml" value="0.27708333333333335" />
         <entry key="app/src/main/res/drawable/bg_button_black_disable_2.xml" value="0.27708333333333335" />
+        <entry key="app/src/main/res/drawable/bg_button_black_enable.xml" value="0.32314814814814813" />
+        <entry key="app/src/main/res/drawable/bg_button_pink_enable.xml" value="0.32314814814814813" />
         <entry key="app/src/main/res/drawable/bg_check.xml" value="0.33796296296296297" />
         <entry key="app/src/main/res/drawable/bg_edt.xml" value="0.21458333333333332" />
         <entry key="app/src/main/res/drawable/bg_edt_gray.xml" value="0.33796296296296297" />

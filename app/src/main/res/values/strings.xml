@@ -51,4 +51,13 @@
     <string name="enter_your_name">이름 입력</string>
     <string name="dob">생년월일</string>
     <string name="year">년</string>
+    <string name="work">일</string>
+    <string name="month">월</string>
+    <string name="male">남</string>
+    <string name="female">여</string>
+    <string name="address">주소</string>
+    <string name="enter_post_code">우편번호 입력</string>
+    <string name="address_search">주소 검색</string>
+    <string name="enter_address">주소 입력</string>
+    <string name="enter_detail_address">상세주소 입력</string>
 </resources>

@@ -9,8 +9,12 @@ import android.view.LayoutInflater
 import android.view.View
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
+import androidx.core.view.marginTop
 import com.example.ocmr.R
 import com.example.ocmr.databinding.OcmrFormLayoutBinding
+import com.example.ocmr.utils.dp
+import com.example.ocmr.utils.px
+import com.example.ocmr.utils.toPx
 import java.util.jar.Attributes
 
 class OcmrForm  @JvmOverloads constructor(
@@ -79,8 +83,10 @@ class OcmrForm  @JvmOverloads constructor(
         }
 
         if(typeForm == 1 && !strTitle.isNullOrEmpty()) {
-            val params = LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT)
-            params.topMargin =
+            val params: LayoutParams = binding?.etForm?.layoutParams as LayoutParams
+            params.setMargins(0, 16.px, 0, 0)
+            binding?.etForm?.layoutParams = params
+
         }
 
     }

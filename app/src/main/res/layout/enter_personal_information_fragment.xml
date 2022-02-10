@@ -1,66 +1,250 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tvTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:text="@string/please_enter_your_personal_information"
-        android:textColor="@color/colorMainBlack"
-        android:textSize="20sp"
-        android:fontFamily="@font/apple_sd_gothic_neo_bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <!--    Name-->
-    <com.example.ocmr.custom.OcmrForm
-        android:id="@+id/formName"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="48dp"
-        app:typeForm="1"
-        app:strTitle="@string/name"
-        app:strHint="@string/enter_your_name"
-        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:paddingBottom="80dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tvDob"
-        android:text="@string/dob"
-        android:textColor="@color/colorMainBlack"
-        android:textSize="16sp"
-        android:layout_marginTop="28dp"
-        android:fontFamily="@font/apple_sd_gothic_neo_medium"
-        app:layout_constraintStart_toStartOf="@id/formName"
-        app:layout_constraintTop_toBottomOf="@id/formName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="52dp"
+            android:fontFamily="@font/apple_sd_gothic_neo_bold"
+            android:text="@string/please_enter_your_personal_information"
+            android:textColor="@color/colorMainBlack"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <com.example.ocmr.custom.OcmrForm
-        android:id="@+id/formYear"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="16dp"
-        app:typeForm="1"
-        app:strHint="YYYY"
-        app:layout_constraintTop_toBottomOf="@id/tvDob"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_width="109dp"
-        android:layout_height="wrap_content"/>
+        <!--    Name-->
+        <com.example.ocmr.custom.OcmrForm
+            android:id="@+id/formName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="48dp"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            app:strHint="@string/enter_your_name"
+            app:strTitle="@string/name"
+            app:typeForm="1" />
 
-    <TextView
-        android:text="@string/year"
-        android:textColor="@color/colorMainBlack"
-        android:textSize="16sp"
-        android:fontFamily="@font/apple_sd_gothic_neo_medium"
-        android:layout_marginStart="8dp"
-        app:layout_constraintStart_toEndOf="@id/formYear"
-        app:layout_constraintTop_toTopOf="@id/formYear"
-        app:layout_constraintBottom_toBottomOf="@id/formYear"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/tvDob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:fontFamily="@font/apple_sd_gothic_neo_medium"
+            android:text="@string/dob"
+            android:textColor="@color/colorMainBlack"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/formName"
+            app:layout_constraintTop_toBottomOf="@id/formName" />
+
+        <com.example.ocmr.custom.OcmrForm
+            android:id="@+id/formYear"
+            android:layout_width="109dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDob"
+            app:strHint="YYYY"
+            app:typeForm="1" />
+
+        <TextView
+            android:id="@+id/tvYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/apple_sd_gothic_neo_medium"
+            android:text="@string/year"
+            android:textColor="@color/colorMainBlack"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/formYear"
+            app:layout_constraintStart_toEndOf="@id/formYear"
+            app:layout_constraintTop_toTopOf="@id/formYear" />
+
+        <com.example.ocmr.custom.OcmrForm
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            app:layout_constraintEnd_toStartOf="@id/tvMonth"
+            app:layout_constraintStart_toEndOf="@id/tvYear"
+            app:layout_constraintTop_toTopOf="@id/formYear"
+            app:strHint="MM"
+            app:typeForm="1" />
+
+        <TextView
+            android:id="@+id/tvMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/apple_sd_gothic_neo_medium"
+            android:text="@string/month"
+            android:textColor="@color/colorMainBlack"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/formYear"
+            app:layout_constraintEnd_toEndOf="@id/tvDay"
+            app:layout_constraintStart_toStartOf="@id/tvYear"
+            app:layout_constraintTop_toTopOf="@id/formYear" />
+
+        <com.example.ocmr.custom.OcmrForm
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            app:layout_constraintEnd_toStartOf="@id/tvDay"
+            app:layout_constraintStart_toEndOf="@id/tvMonth"
+            app:layout_constraintTop_toTopOf="@id/formYear"
+            app:strHint="DD"
+            app:typeForm="1" />
+
+        <TextView
+            android:id="@+id/tvDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/apple_sd_gothic_neo_medium"
+            android:text="@string/work"
+            android:textColor="@color/colorMainBlack"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/formYear"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/formYear" />
+
+        <TextView
+            android:id="@+id/tvGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:fontFamily="@font/apple_sd_gothic_neo_medium"
+            android:text="@string/dob"
+            android:textColor="@color/colorMainBlack"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/formYear"
+            app:layout_constraintTop_toBottomOf="@id/formYear" />
+
+        <Button
+            android:id="@+id/btnMale"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/male"
+            android:layout_marginEnd="23dp"
+            android:textSize="16sp"
+            android:fontFamily="@font/apple_sd_gothic_neo_bold"
+            android:textColor="@color/colorGray2"
+            android:background="@drawable/bg_button_black_disable"
+            app:layout_constraintEnd_toStartOf="@+id/btnFemale"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvGender" />
+
+        <Button
+            android:id="@+id/btnFemale"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginEnd="20dp"
+            android:text="@string/female"
+            android:textSize="16sp"
+            android:fontFamily="@font/apple_sd_gothic_neo_bold"
+            android:textColor="@color/colorMain"
+            android:background="@drawable/bg_button_pink_enable"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnMale"
+            app:layout_constraintTop_toTopOf="@id/btnMale" />
+
+        <!--    Address-->
+        <com.example.ocmr.custom.OcmrForm
+            android:id="@+id/formPostCode"
+            app:typeForm="1"
+            app:strTitle="@string/address"
+            app:strHint="@string/enter_post_code"
+            app:layout_constraintTop_toBottomOf="@id/btnMale"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="28dp"
+            app:layout_constraintEnd_toStartOf="@id/btnAddressSearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btnAddressSearch"
+            app:layout_constraintBottom_toBottomOf="@id/formPostCode"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="20dp"
+            android:textSize="16sp"
+            android:fontFamily="@font/apple_sd_gothic_neo_bold"
+            android:text="@string/address_search"
+            android:textColor="@color/colorGray4"
+            android:background="@drawable/bg_button_black_disable_2"
+            android:layout_width="wrap_content"
+            android:layout_height="52dp"/>
+
+        <com.example.ocmr.custom.OcmrForm
+            android:id="@+id/formEnterAddress"
+            app:typeForm="1"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="8dp"
+            app:strHint="@string/enter_address"
+            app:layout_constraintTop_toBottomOf="@id/formPostCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.example.ocmr.custom.OcmrForm
+            android:id="@+id/formEnterDetailAddress"
+            app:typeForm="1"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="8dp"
+            app:strHint="@string/enter_detail_address"
+            app:layout_constraintTop_toBottomOf="@id/formEnterAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="36dp"
+            android:text="@string/back"
+            android:textColor="@color/colorGray2"
+            android:textSize="16sp"
+            style="@style/StyleButtonBlack"
+            android:enabled="false"
+            app:layout_constraintTop_toTopOf="@id/btnNext"
+            app:layout_constraintEnd_toStartOf="@+id/btnNext"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginEnd="20dp"
+            android:text="@string/next"
+            android:textColor="@color/colorGray2"
+            android:textSize="16sp"
+            android:layout_marginBottom="36dp"
+            android:layout_marginStart="23dp"
+            style="@style/StyleButtonBlack"
+            android:enabled="false"
+            android:layout_marginTop="44dp"
+            app:layout_constraintTop_toBottomOf="@id/formEnterDetailAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnBack" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>
