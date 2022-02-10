@@ -78,6 +78,11 @@ class OcmrForm  @JvmOverloads constructor(
             setTextColor(if(typeForm == 0) ContextCompat.getColor(context, R.color.white) else ContextCompat.getColor(context, R.color.colorMainBlack))
         }
 
+        if(typeForm == 1 && !strTitle.isNullOrEmpty()) {
+            val params = LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT)
+            params.topMargin =
+        }
+
     }
 
     fun onError(strError: String) {

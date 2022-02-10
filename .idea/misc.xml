@@ -40,6 +40,7 @@
         <entry key="app/src/main/res/drawable/bg_edt_white.xml" value="0.33796296296296297" />
         <entry key="app/src/main/res/drawable/bg_edt_white_50.xml" value="0.294140625" />
         <entry key="app/src/main/res/drawable/bg_splash.xml" value="0.28703703703703703" />
+        <entry key="app/src/main/res/drawable/focus_tint_list.xml" value="0.294140625" />
         <entry key="app/src/main/res/drawable/ic_apple.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_check_off.xml" value="0.33796296296296297" />
         <entry key="app/src/main/res/drawable/ic_check_on.xml" value="0.33796296296296297" />

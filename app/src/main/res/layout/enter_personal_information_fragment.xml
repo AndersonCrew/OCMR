@@ -1,7 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="@string/please_enter_your_personal_information"
+        android:textColor="@color/colorMainBlack"
+        android:textSize="20sp"
+        android:fontFamily="@font/apple_sd_gothic_neo_bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--    Name-->
+    <com.example.ocmr.custom.OcmrForm
+        android:id="@+id/formName"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="48dp"
+        app:typeForm="1"
+        app:strTitle="@string/name"
+        app:strHint="@string/enter_your_name"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvDob"
+        android:text="@string/dob"
+        android:textColor="@color/colorMainBlack"
+        android:textSize="16sp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/apple_sd_gothic_neo_medium"
+        app:layout_constraintStart_toStartOf="@id/formName"
+        app:layout_constraintTop_toBottomOf="@id/formName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.example.ocmr.custom.OcmrForm
+        android:id="@+id/formYear"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        app:typeForm="1"
+        app:strHint="YYYY"
+        app:layout_constraintTop_toBottomOf="@id/tvDob"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="109dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:text="@string/year"
+        android:textColor="@color/colorMainBlack"
+        android:textSize="16sp"
+        android:fontFamily="@font/apple_sd_gothic_neo_medium"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@id/formYear"
+        app:layout_constraintTop_toTopOf="@id/formYear"
+        app:layout_constraintBottom_toBottomOf="@id/formYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
