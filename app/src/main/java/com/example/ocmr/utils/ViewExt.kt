@@ -1,6 +1,7 @@
 package com.example.ocmr.utils
 
 import android.view.View
+import androidx.constraintlayout.widget.Group
 import com.google.android.material.snackbar.Snackbar
 
 /**
@@ -30,5 +31,11 @@ fun View.showSnackBar(
         snackbar.setAction(actionMessage) {
             action(this)
         }.show()
+    }
+}
+
+fun Group.setAllOnClickListener(listener: (View) -> Unit) {
+    referencedIds.forEach { id ->
+        rootView.findViewById<View>(id).setOnClickListener(listener)
     }
 }

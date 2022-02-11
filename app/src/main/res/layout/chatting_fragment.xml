@@ -1,11 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="22dp"
+        android:src="@drawable/ic_back_black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardAvatar"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="56dp"
+        app:cardCornerRadius="29dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/avt_default" />
+    </androidx.cardview.widget.CardView>
+
     <TextView
-        android:text="Chatting Fragment"
-        android:gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/apple_sd_gothic_neo_medium"
+        android:text="픽스 마스터"
+        android:textColor="@color/colorMainBlack"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardAvatar" />
+
+    <ImageView
+        android:id="@+id/imgLeaveRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/ic_leave_room"
+        app:layout_constraintEnd_toStartOf="@id/tvLeaveRoom"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+    <TextView
+        android:id="@+id/tvLeaveRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/leave_room"
+        android:includeFontPadding="false"
+        android:textSize="13sp"
+        android:fontFamily="@font/apple_sd_gothic_neo_medium"
+        android:textColor="@color/colorGray3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgLeaveRoom"
+        app:layout_constraintTop_toTopOf="@id/imgLeaveRoom" />
+
+    <View
+        android:id="@+id/v1"
+        android:background="@color/colorGray2"
+        android:layout_marginEnd="22dp"
+        app:layout_constraintEnd_toStartOf="@id/imgLeaveRoom"
+        app:layout_constraintTop_toTopOf="@id/imgLeaveRoom"
+        app:layout_constraintBottom_toBottomOf="@id/imgLeaveRoom"
+        android:layout_width="1dp"
+        android:layout_height="28dp"/>
+
+    <View
+        android:id="@+id/v2"
+        android:background="@color/colorGray2"
+        android:layout_marginStart="22dp"
+        app:layout_constraintStart_toEndOf="@id/tvLeaveRoom"
+        app:layout_constraintTop_toTopOf="@id/imgLeaveRoom"
+        app:layout_constraintBottom_toBottomOf="@id/imgLeaveRoom"
+        android:layout_width="1dp"
+        android:layout_height="28dp"/>
+
+    <TextView
+        android:id="@+id/tvSendRequest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/send_request"
+        android:includeFontPadding="false"
+        android:textSize="13sp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/apple_sd_gothic_neo_medium"
+        android:textColor="@color/colorGray3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/v1"
+        app:layout_constraintTop_toTopOf="@id/imgLeaveRoom" />
+
+    <ImageView
+        android:id="@+id/imgSendRequest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/ic_send_request"
+        app:layout_constraintEnd_toStartOf="@id/tvSendRequest"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+    <ImageView
+        android:id="@+id/imgReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/ic_report"
+        app:layout_constraintStart_toEndOf="@id/v2"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+    <TextView
+        android:id="@+id/tvReportIt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/report_it"
+        android:includeFontPadding="false"
+        android:textSize="13sp"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/apple_sd_gothic_neo_medium"
+        android:textColor="@color/colorGray3"
+        app:layout_constraintStart_toEndOf="@id/imgReport"
+        app:layout_constraintTop_toTopOf="@id/imgLeaveRoom" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/grLeave"
+        app:constraint_referenced_ids="imgLeaveRoom, tvLeaveRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

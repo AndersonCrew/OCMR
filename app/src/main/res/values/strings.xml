@@ -67,4 +67,6 @@
     <string name="chatting">채팅</string>
     <string name="my_page">마이페이지</string>
     <string name="act_as_master">마스터로 활동</string>
+    <string name="leave_room">방 나가기</string>
+    <string name="report_it">신고하기</string>
 </resources>
