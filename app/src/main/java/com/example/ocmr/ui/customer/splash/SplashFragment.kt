@@ -94,9 +94,5 @@ class SplashFragment : BaseFragment<SplashViewModel, SplashFragmentBinding>() {
         }, 500)
     }
 
-    override fun initObservers() {
-
-    }
-
 
 }

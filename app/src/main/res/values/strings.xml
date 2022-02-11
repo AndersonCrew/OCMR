@@ -60,4 +60,11 @@
     <string name="address_search">주소 검색</string>
     <string name="enter_address">주소 입력</string>
     <string name="enter_detail_address">상세주소 입력</string>
+    <string name="home">홈</string>
+    <string name="send_request">보낸 요청서</string>
+    <string name="transaction_history">거래내역</string>
+    <string name="master_suggestion">마스터의 제안</string>
+    <string name="chatting">채팅</string>
+    <string name="my_page">마이페이지</string>
+    <string name="act_as_master">마스터로 활동</string>
 </resources>

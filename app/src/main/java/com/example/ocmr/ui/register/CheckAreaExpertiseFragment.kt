@@ -26,8 +26,4 @@ class CheckAreaExpertiseFragment: BaseFragment<RegisterViewModel, CheckAreaExper
             findNavController().navigate(R.id.action_checkArea_to_select_item)
         }
     }
-
-    override fun initObservers() {
-
-    }
 }

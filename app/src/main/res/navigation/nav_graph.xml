@@ -23,8 +23,8 @@
 
     <!--LoginFragment-->
     <fragment android:id="@+id/loginFragment"
-        tools:layout="@layout/login_fragment"
-        android:name="com.example.ocmr.ui.customer.login.LoginFragment">
+        tools:layout="@layout/main_fragment"
+        android:name="com.example.ocmr.ui.customer.main.MainFragment">
 
         <!--Sign Up By Email-->
         <action

@@ -23,8 +23,4 @@ class RegisterStepFragment: BaseFragment<RegisterViewModel, RegisterStepFragment
     override fun initViews() {
 
     }
-
-    override fun initObservers() {
-
-    }
 }

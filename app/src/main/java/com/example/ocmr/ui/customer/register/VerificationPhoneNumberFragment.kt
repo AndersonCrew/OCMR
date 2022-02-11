@@ -74,10 +74,6 @@ class VerificationPhoneNumberFragment: BaseFragment<RegisterViewModel, Verificat
         }
     }
 
-    override fun initObservers() {
-
-    }
-
     fun formatDuration(seconds: Long): String = if (seconds < 60) {
         seconds.toString()
     } else {

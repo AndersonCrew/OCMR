@@ -57,10 +57,6 @@ class LoginFragment: BaseFragment<LoginViewModel, LoginFragmentBinding>() {
 
     }
 
-    override fun initObservers() {
-
-    }
-
     override fun onDestroy() {
         super.onDestroy()
         socket?.disconnect()

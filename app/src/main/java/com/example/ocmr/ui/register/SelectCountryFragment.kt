@@ -24,8 +24,4 @@ class SelectCountryFragment: BaseFragment<RegisterViewModel, SelectCountryFragme
 
     }
 
-    override fun initObservers() {
-
-    }
-
 }

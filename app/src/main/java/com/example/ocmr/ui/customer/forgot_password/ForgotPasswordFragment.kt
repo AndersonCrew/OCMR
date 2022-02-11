@@ -30,8 +30,4 @@ class ForgotPasswordFragment: BaseFragment<ForgotPasswordViewModel, ForgotPasswo
             findNavController().popBackStack()
         }
     }
-
-    override fun initObservers() {
-
-    }
 }

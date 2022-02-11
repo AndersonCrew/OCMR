@@ -73,8 +73,4 @@ class RegisterFragment: BaseFragment<RegisterViewModel, RegisterFragmentBinding>
             }
         }.start()
     }
-
-    override fun initObservers() {
-
-    }
 }

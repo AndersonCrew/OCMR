@@ -21,8 +21,4 @@ class VerificationRegisterFragment: BaseFragment<RegisterViewModel, VerifyPhoneN
     override fun initViews() {
 
     }
-
-    override fun initObservers() {
-
-    }
 }

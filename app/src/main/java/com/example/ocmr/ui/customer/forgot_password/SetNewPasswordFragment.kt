@@ -27,8 +27,4 @@ class SetNewPasswordFragment: BaseFragment<ForgotPasswordViewModel, SetNewPasswo
     override fun initViews() {
 
     }
-
-    override fun initObservers() {
-
-    }
 }

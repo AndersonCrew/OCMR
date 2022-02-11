@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/homeFragment"
+    android:id="@+id/main_nav_graph">
+
+    <!--HomeFragment-->
+    <fragment
+        android:id="@+id/homeFragment"
+        tools:layout="@layout/home_fragment"
+        android:name="com.example.ocmr.ui.customer.main.HomeFragment">
+        <action
+            android:id="@+id/actionHomeFragment_toChattingFragment"
+            app:destination="@id/chattingFragment" />
+    </fragment>
+
+    <!--ChattingFragment-->
+    <fragment
+        android:id="@+id/chattingFragment"
+        tools:layout="@layout/chatting_fragment"
+        android:name="com.example.ocmr.ui.customer.chatting.ChattingFragment">
+        <action android:id="@+id/actionChattingFragment_toHomeFragment"
+            app:destination="@id/homeFragment"/>
+    </fragment>
+
+
+</navigation>

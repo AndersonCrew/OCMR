@@ -22,8 +22,4 @@ class SelectItemFragment: BaseFragment<RegisterViewModel, SelectItemFragmentBind
     override fun initViews() {
 
     }
-
-    override fun initObservers() {
-
-    }
 }

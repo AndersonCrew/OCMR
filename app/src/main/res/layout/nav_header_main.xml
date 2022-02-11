@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="20dp"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/imgClose"
+        android:src="@drawable/ic_close_gray"
+        android:padding="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="61dp"
+        android:layout_marginEnd="21dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardAvatar"
+        android:layout_marginTop="136dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:cardCornerRadius="24dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp">
+        <ImageView
+            android:src="@drawable/avt_default"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvName"
+        android:textColor="@color/colorMainBlack"
+        android:textSize="20sp"
+        android:text="이지원 고객님"
+        android:includeFontPadding="false"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/cardAvatar"
+        app:layout_constraintStart_toStartOf="@id/cardAvatar"
+        android:fontFamily="@font/apple_sd_gothic_neo_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:id="@+id/vLine"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/tvName"
+        android:background="@color/colorMainBlack"
+        android:layout_marginEnd="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+
+    <TextView
+        android:id="@+id/tvHome"
+        app:layout_constraintTop_toBottomOf="@id/vLine"
+        android:text="@string/home"
+        android:textColor="@color/colorMainBlack"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="@font/apple_sd_gothic_neo_medium"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvSendRequest"
+        app:layout_constraintTop_toBottomOf="@id/tvHome"
+        android:text="@string/send_request"
+        android:textColor="@color/colorMainBlack"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="@font/apple_sd_gothic_neo_medium"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvMasterSuggestion"
+        app:layout_constraintTop_toBottomOf="@id/tvSendRequest"
+        android:text="@string/master_suggestion"
+        android:textColor="@color/colorMainBlack"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="@font/apple_sd_gothic_neo_medium"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvTransactionHistory"
+        app:layout_constraintTop_toBottomOf="@id/tvMasterSuggestion"
+        android:text="@string/transaction_history"
+        android:textColor="@color/colorMainBlack"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="@font/apple_sd_gothic_neo_medium"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvChatting"
+        app:layout_constraintTop_toBottomOf="@id/tvTransactionHistory"
+        android:text="@string/chatting"
+        android:textColor="@color/colorMainBlack"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="@font/apple_sd_gothic_neo_medium"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvMyPage"
+        app:layout_constraintTop_toBottomOf="@id/tvChatting"
+        android:text="@string/my_page"
+        android:textColor="@color/colorMainBlack"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="@font/apple_sd_gothic_neo_medium"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/tvMyPage"
+        android:layout_marginTop="150dp"
+        android:fontFamily="@font/apple_sd_gothic_neo_bold"
+        android:textSize="20sp"
+        android:textColor="@color/colorMain"
+        android:text="@string/act_as_master"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

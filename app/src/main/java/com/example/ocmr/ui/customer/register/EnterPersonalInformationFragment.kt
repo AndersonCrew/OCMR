@@ -25,8 +25,4 @@ class EnterPersonalInformationFragment: BaseFragment<RegisterViewModel, EnterPer
     override fun initViews() {
 
     }
-
-    override fun initObservers() {
-
-    }
 }
