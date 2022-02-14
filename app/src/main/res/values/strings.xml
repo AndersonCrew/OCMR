@@ -69,4 +69,6 @@
     <string name="act_as_master">마스터로 활동</string>
     <string name="leave_room">방 나가기</string>
     <string name="report_it">신고하기</string>
+    <string name="search_service_you_want">원하는 서비스를 검색하세요</string>
+    <string name="recent_searches">최근 검색어</string>
 </resources>

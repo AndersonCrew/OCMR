@@ -33,6 +33,15 @@ abstract class BaseFragment<VM: BaseViewModel, VB: ViewBinding>: Fragment() {
         initViews()
     }
 
+    override fun onResume() {
+        super.onResume()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        eventDisposable.dispose()
+    }
+
     abstract fun initViews()
 
     override fun onDestroyView() {

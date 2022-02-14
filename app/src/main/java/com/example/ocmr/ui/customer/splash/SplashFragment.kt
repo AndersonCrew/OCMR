@@ -1,5 +1,7 @@
 package com.example.ocmr.ui.customer.splash
 
+import android.content.Intent
+import android.content.IntentFilter
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -21,6 +23,9 @@ import com.example.ocmr.viewmodel.SplashViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 import androidx.activity.result.contract.ActivityResultContracts.RequestPermission
+import androidx.localbroadcastmanager.content.LocalBroadcastManager
+import com.example.ocmr.ui.customer.reveiver.CustomBroadcastReceiver
+import com.example.ocmr.ui.customer.reveiver.ICusBro
 import com.example.ocmr.utils.showSnackBar
 import com.google.android.material.snackbar.Snackbar
 
@@ -58,6 +63,7 @@ class SplashFragment : BaseFragment<SplashViewModel, SplashFragmentBinding>() {
     }
 
     override fun initViews() {
+
         Handler(Looper.getMainLooper()).postDelayed({
             val splashTextAnim =
                 AnimationUtils.loadAnimation(requireContext(), R.anim.text_splash_anim)
@@ -92,6 +98,7 @@ class SplashFragment : BaseFragment<SplashViewModel, SplashFragmentBinding>() {
         Handler(Looper.getMainLooper()).postDelayed({
             findNavController().navigate(R.id.action_splashFragment_to_loginFragment)
         }, 500)
+
     }
 
 

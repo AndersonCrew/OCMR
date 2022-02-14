@@ -33,20 +33,12 @@ class ChattingFragment: BaseFragment<ChattingViewModel, ChattingFragmentBinding>
         }
     }
 
-    override fun onPause() {
-        super.onPause()
-        isVisibility = false
-        Log.d("onEventReceive", "ChattingFragment onPause")
-    }
 
     override fun onEventReceive(messageEvent: MessageEvent) {
         super.onEventReceive(messageEvent)
-        if(isVisibility) {
-            when(messageEvent.key) {
-                RxBus.ON_HOME_CLICK -> {
-                    findNavController().popBackStack(R.id.homeFragment, false)
-                    //findNavController().navigate(R.id.actionChattingFragment_toHomeFragment)
-                }
+        when(messageEvent.key) {
+            RxBus.ON_HOME_CLICK -> {
+                findNavController().navigate(R.id.actionChattingFragment_toHomeFragment)
             }
         }
     }
