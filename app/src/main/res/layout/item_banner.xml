@@ -16,7 +16,6 @@
         android:layout_marginStart="20dp"
         android:layout_marginBottom="8dp"
         android:textColor="@color/white"
-        android:fontFamily="@font/apple_sd_gothic_neo_medium"
         app:layout_constraintBottom_toTopOf="@id/tvMessage"
         android:text="09.03 - 09. 15"
         android:layout_width="wrap_content"

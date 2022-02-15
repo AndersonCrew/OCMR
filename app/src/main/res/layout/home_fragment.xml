@@ -21,6 +21,7 @@
         android:layout_height="wrap_content"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/csCategory"
         app:layout_constraintTop_toBottomOf="@id/viewPagerBanner"
         android:layout_marginTop="52dp"
         android:layout_width="match_parent"
@@ -37,7 +38,6 @@
         <TextView
             android:layout_marginTop="16dp"
             android:textColor="@color/colorMainBlack2"
-            android:fontFamily="@font/apple_sd_gothic_neo_medium"
             app:layout_constraintTop_toBottomOf="@id/imgReform"
             app:layout_constraintStart_toStartOf="@id/imgReform"
             app:layout_constraintEnd_toEndOf="@id/imgReform"
@@ -56,7 +56,6 @@
         <TextView
             android:layout_marginTop="16dp"
             android:textColor="@color/colorMainBlack2"
-            android:fontFamily="@font/apple_sd_gothic_neo_medium"
             app:layout_constraintTop_toBottomOf="@id/imgRepair"
             app:layout_constraintStart_toStartOf="@id/imgRepair"
             app:layout_constraintEnd_toEndOf="@id/imgRepair"
@@ -75,7 +74,6 @@
         <TextView
             android:layout_marginTop="16dp"
             android:textColor="@color/colorMainBlack2"
-            android:fontFamily="@font/apple_sd_gothic_neo_medium"
             app:layout_constraintTop_toBottomOf="@id/imgDyeing"
             app:layout_constraintStart_toStartOf="@id/imgDyeing"
             app:layout_constraintEnd_toEndOf="@id/imgDyeing"
@@ -94,7 +92,6 @@
         <TextView
             android:layout_marginTop="16dp"
             android:textColor="@color/colorMainBlack2"
-            android:fontFamily="@font/apple_sd_gothic_neo_medium"
             app:layout_constraintTop_toBottomOf="@id/imgCleaning"
             app:layout_constraintStart_toStartOf="@id/imgCleaning"
             app:layout_constraintEnd_toEndOf="@id/imgCleaning"
@@ -102,5 +99,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

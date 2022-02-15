@@ -47,14 +47,19 @@
         <entry key="app/src/main/res/drawable/ic_check_off.xml" value="0.33796296296296297" />
         <entry key="app/src/main/res/drawable/ic_check_on.xml" value="0.33796296296296297" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/chatting_fragment.xml" value="0.28203125" />
         <entry key="app/src/main/res/layout/enter_personal_information_fragment.xml" value="0.28203125" />
         <entry key="app/src/main/res/layout/forgot_password_fragment.xml" value="0.28203125" />
         <entry key="app/src/main/res/layout/home_fragment.xml" value="0.28203125" />
+        <entry key="app/src/main/res/layout/item_banner.xml" value="0.28203125" />
+        <entry key="app/src/main/res/layout/item_search.xml" value="0.28203125" />
         <entry key="app/src/main/res/layout/login_fragment.xml" value="0.2" />
         <entry key="app/src/main/res/layout/main_fragment.xml" value="0.36041666666666666" />
+        <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.28203125" />
         <entry key="app/src/main/res/layout/ocmr_form_layout.xml" value="0.28203125" />
         <entry key="app/src/main/res/layout/register_fragment.xml" value="0.335" />
         <entry key="app/src/main/res/layout/register_step_fragment.xml" value="0.28203125" />
+        <entry key="app/src/main/res/layout/search_fragment.xml" value="0.28203125" />
         <entry key="app/src/main/res/layout/select_country_fragment.xml" value="0.28203125" />
         <entry key="app/src/main/res/layout/select_item_fragment.xml" value="0.28203125" />
         <entry key="app/src/main/res/layout/set_new_password_fragment.xml" value="0.28203125" />

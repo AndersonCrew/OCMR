@@ -8,11 +8,9 @@
     android:layout_height="wrap_content">
 
     <TextView
-        android:textSize="16sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:textColor="@color/colorGray2"
-        android:fontFamily="@font/apple_sd_gothic_neo_medium"
         tools:text="가방 리폼"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
